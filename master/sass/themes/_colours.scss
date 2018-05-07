@@ -1,0 +1,88 @@
+/*------------------------------------
+[Color Codes]
+
+// Darks
+$dark1: #0d1422; // Used for H1 & Dark Blocks
+
+$dark2: #1C2541; // Used for H2, H3 & Mid Dark Blocks
+$dark3: #2A3454; // Lighter Dark Blocks
+$dark4: #3B476E; // Used for lines on dark areas and occassional places
+$black: #151617; // Used for alt darks
+
+// Nav Dark
+$nav-dark: #060b1b;
+
+// Greys
+$grey1: #4B596A; // Used for H5
+$grey2: #606B77; // Used for H6
+$grey3: #868A90; // Used for <p>
+
+// Light Greys
+$lg1: #C8CED4; // Defined Light Grey & Header 6 on Dark Background
+$lg2: #E9ECEF; // All lines on light background & Paragraph Text on Dark Background
+$lg3: #F5F7F9; // Grey Blocks
+$l-line: $lg2;
+$d-line: $dark4;
+$lborder: 1px solid $l-line;
+$dborder: 1px solid $d-line;
+
+// White
+$white: #fff; // Backgrounds & H1, H2
+
+// Primary Colours
+$primary: #5BC0BE; // Used for H4, Regular Links, Borders
+$secondary: #224B7D; // Secondary for text hovers
+
+// Shaders
+$shader: rgba(13, 20, 34, 0.9); // Used for shading on top of images and elements
+$navBg: rgba(13, 20, 34, 0.95); // Used for shading on top of images and elements
+------------------------------------*/
+
+
+// Dark Blue's
+$dark1: #0d1422; // Used for H1 & Dark Blocks
+
+$dark2: #1C2541; // Used for H2, H3 & Mid Dark Blocks
+$dark3: #2A3454; // Lighter Dark Blocks
+$dark4: #3B476E; // Used for lines on dark areas and occassional places
+$black: #151617; // Used for alt darks
+// Nav Dark
+$nav-dark: #060b1b;
+// Greys
+$grey1: #4B596A; // Used for H5
+$grey2: #606B77; // Used for H6
+$grey3: #868A90; // Used for <p>
+// Light Greys
+$lg1: #C8CED4; // Defined Light Grey & Header 6 on Dark Background
+$lg2: #E9ECEF; // All lines on light background & Paragraph Text on Dark Background
+$lg3: #F5F7F9; // Grey Blocks
+$l-line: $lg2;
+$d-line: $dark4;
+$lborder: 1px solid $l-line;
+$dborder: 1px solid $d-line;
+// White
+$white: #fff; // Backgrounds & H1, H2
+// Primary Colours
+$primary: #5BC0BE; // Used for H4, Regular Links, Borders
+$secondary: #224B7D; // Secondary for text hovers
+// Shaders
+$shader: rgba(13, 20, 34, 0.9); // Used for shading on top of images and elements
+$navBg: rgba(13, 20, 34, 0.95); // Used for shading on top of images and elements
+// Typography on Light Background
+$header1: $dark1;
+$header2: $dark2;
+$header3: $dark2;
+$header4: $primary;
+$header5: $grey1;
+$header6: $grey2;
+$p: $grey3;
+$promo-head:$dark2;
+// Typography on Dark Background
+$header1-w:$white;
+$header2-w:$white;
+$header3-w:$white;
+$header4-w:$primary;
+$header5-w:$white;
+$header6-w:$lg1;
+$p-w:$lg2;
+$promo-head-w:$white;

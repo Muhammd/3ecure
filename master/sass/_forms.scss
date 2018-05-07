@@ -1,0 +1,129 @@
+form {
+   input,
+   textarea {
+      border: 2px solid $lg2;
+      border-radius: 4px;
+      padding: 8px 15px 9px;
+      background: none;
+      @include t1;
+      color: $p;
+      @include bp(xs) {
+         width: 100%;
+         text-align: center;
+         padding: 13px 15px 14px;
+      }
+   }
+}
+
+.dark1 form,
+.dark2 form,
+.dark3 form {
+   input {
+      border: 2px solid $dborder;
+   }
+}
+
+form.contact-form {
+   margin-right: -15px;
+   margin-left: -15px;
+   .input-field {
+      margin-bottom: 15px;
+      @include bp(xs) {
+         margin-bottom: 25px;
+      }
+   }
+   input[type="text"],
+   input[type="tel"],
+   input[type="email"],
+   input[type="password"],
+   textarea {
+      width: 100%;
+      background: $lg3;
+      border-color: transparent;
+      padding: 10px 15px 11px;
+   }
+   input[type="submit"] {
+      border-color: $primary;
+      @include bp(xs) {
+         min-width: 50%;
+      }
+   }
+   textarea {
+      padding-top: 12px;
+      padding-bottom: 12px;
+   }
+   .help-block ul li {
+      font-size: 12px;
+      color: #EC4640;
+   }
+   .messages {
+      color: $primary;
+      text-align: center;
+      padding: 21px 0 0;
+      font-weight: 700;
+      display: block;
+   }
+   .messages button {
+      display: none;
+   }
+}
+
+.dark1,
+.dark3 {
+   form.contact-form {
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+         background: $dark2;
+      }
+   }
+}
+
+.dark2 {
+   form.contact-form {
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+         background: $dark3;
+      }
+   }
+}
+
+.grey {
+   form.contact-form {
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+         background: $white;
+      }
+   }
+}
+
+input[type="submit"] {
+   background: transparent;
+   width: auto;
+   color: $primary;
+   border-color: $primary;
+   &.disabled {
+      opacity: .8;
+      &:hover {
+         background: transparent;
+         color: $primary;
+         cursor: initial;
+      }
+   }
+   &:hover {
+      background: $primary;
+      color: white;
+   }
+   @include bp(xs) {
+      background: $primary;
+      color: white;
+   }
+}

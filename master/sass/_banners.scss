@@ -1,0 +1,440 @@
+.header-in {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    cursor: pointer;
+    margin-left: -15px;
+}
+
+// --------------------------
+// Personal
+// --------------------------
+header#personal {
+    height: 70vh;
+    width: 100%;
+    min-height: 500px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    h1 {
+        color: white;
+    }
+    .caption {
+        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+    .arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        cursor: pointer;
+        margin-left: -15px;
+    }
+}
+
+// --------------------------
+// Agency
+// --------------------------
+header#agency {
+    height: 90vh;
+    min-height: 600px;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    .caption {
+        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+    .arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        cursor: pointer;
+        margin-left: -15px;
+    }
+}
+
+// --------------------------
+// Agency 2
+// --------------------------
+header#agency2 {
+    #bgvid {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        background: url(../video/videobg.jpg) no-repeat;
+        background-size: cover;
+    }
+    height: 100vh;
+    width: 100%;
+    min-height: 600px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background:transparent;
+    .caption {
+        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+    .arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        cursor: pointer;
+        margin-left: -15px;
+    }
+}
+
+// --------------------------
+// Creative
+// --------------------------
+header#creative {
+    background: $dark1;
+    overflow: hidden;
+    .slideshow {
+        min-height: 700px;
+    }
+    .slide__title {
+        padding: 80px;
+        @include bp(xs) {
+            padding: 20px;
+        }
+        img {
+            margin-bottom: 20px;
+        }
+    }
+    .slide {
+        @include bp(sm) {
+            padding: 100px 30px;
+        }
+        @include bp(xs) {
+            padding: 100px 10px;
+        }
+    }
+}
+
+// --------------------------
+// App 1
+// --------------------------
+header#app1 {
+    width: 100%;
+    height: 100vh;
+    min-height:600px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    .phone {
+        text-align: center;
+        img {
+            max-height: 100vh;
+            display: inline-block;
+        }
+    }
+    @include bp(sm) {
+        height: auto;
+    }
+    h5 {
+        color: $primary;
+    }
+    h1,
+    h6 {
+        color: white;
+    }
+    .caption-holder {
+        display: table;
+        height: 100%;
+    }
+    .caption {
+        padding: 50px 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        @include bp(xs) {
+            text-align: center;
+            padding-top: 0;
+        }
+    }
+    .btn span i {
+        margin-left: 5px;
+        bottom: -3px;
+        margin-top: -25px;
+        color: $primary;
+        display: inline-block;
+        position: relative;
+        @include t1;
+        @include bp(xs) {
+            color: white;
+        }
+    }
+    .btn:hover span i {
+        color: white;
+    }
+    .phone img {
+        position: relative;
+        bottom: -150px;
+        @include bp(sm) {
+            bottom: -120px;
+            max-width: 320px;
+            width: 100%;
+        }
+        @include bp(xs) {
+            bottom: 0;
+            margin: 100px auto 30px;
+            display: block;
+        }
+    }
+}
+
+// --------------------------
+// App 2
+// --------------------------
+header#app2 {
+    width: 100%;
+    height: 700px;
+    min-height: 500px;
+    display: block;
+    position: relative;
+    z-index: 5;
+    background-size: cover;
+    margin-bottom: 130px;
+    @include bp(md) {
+        margin-bottom: 80px;
+    }
+    @include bp(sm) {
+        margin-bottom: 60px;
+    }
+    @include bp(xs) {
+        height: 70vh;
+        margin-bottom: 0;
+    }
+    h5 {
+        color: $primary;
+    }
+    h1,
+    h6 {
+        color: white;
+    }
+    .caption-holder {
+        display: table;
+        height: 100%;
+    }
+    .caption {
+        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+    .btn span i {
+        margin-left: 5px;
+        bottom: -3px;
+        color: $primary;
+        margin-top: -25px;
+        display: inline-block;
+        position: relative;
+        @include t1;
+        @include bp(xs) {
+            color: white;
+        }
+    }
+    .btn:hover span i {
+        color: white;
+    }
+    .phone {
+        position: absolute;
+        bottom: -215px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        img {
+            display: inline-block;
+            max-width: 1090px;
+        }
+        @include bp(md) {
+            bottom: -185px;
+            img {
+                max-width: 970px;
+            }
+        }
+        @include bp(sm) {
+            bottom: -150px;
+            img {
+                max-width: 760px;
+            }
+        }
+        @include bp(xs) {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+// --------------------------
+// Software
+// --------------------------
+header#software {
+    width: 100%;
+    height: 800px;
+    display: block;
+    min-height: 500px;
+    position: relative;
+    z-index: 5;
+    background-size: cover;
+    margin-bottom: 130px;
+    @include bp(md) {
+        margin-bottom: 80px;
+    }
+    @include bp(sm) {
+        margin-bottom: 100px;
+        height: 670px;
+    }
+    @include bp(xs) {
+        height: 70vh;
+        margin-bottom: 0;
+    }
+    h5 {
+        color: $primary;
+    }
+    h1,
+    h6 {
+        color: white;
+    }
+    .caption-holder {
+        display: table;
+        height: 100%;
+    }
+    .caption {
+        padding: 111px 20px 0;
+        display: block;
+        vertical-align: middle;
+        position: relative;
+        @include bp(xs) {
+            display: table-cell;
+            padding: 0 20px;
+        }
+    }
+    .btn span i {
+        margin-left: 5px;
+        bottom: -3px;
+        color: $primary;
+        margin-top: -25px;
+        display: inline-block;
+        position: relative;
+        @include t1;
+        @include bp(xs) {
+            color: white;
+        }
+    }
+    .btn:hover span i {
+        color: white;
+    }
+    .macbook {
+        position: absolute;
+        bottom: -150px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        img {
+            display: inline-block;
+            max-width: 980px;
+        }
+        @include bp(md) {
+            bottom: -135px;
+            img {
+                max-width: 970px;
+            }
+        }
+        @include bp(sm) {
+            bottom: -150px;
+            img {
+                max-width: 760px;
+            }
+        }
+        @include bp(xs) {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+// --------------------------
+// Neutral
+// --------------------------
+header#neutral {
+    height: 100%;
+    width: 100%;
+    min-height: 600px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    .caption {
+        padding: 100px 20px;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+    .arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        cursor: pointer;
+        margin-left: -15px;
+    }
+    .btn span i {
+        margin-left: 5px;
+        bottom: -3px;
+        color: $primary;
+        margin-top: -25px;
+        display: inline-block;
+        position: relative;
+        @include t1;
+        @include bp(xs) {
+            color: white;
+        }
+    }
+    .btn:hover span i {
+        color: white;
+    }
+}
+
+.btn.playvideo {
+    border-color: rgba(255,255,255,.05);
+    header#neutral & {
+        span {
+            color: white;
+            @include t1;
+            i {
+                margin-right: 8px;
+                color: white;
+            }
+        }
+        &:hover {
+            span {
+                color: $primary;
+                i {
+                    color:$primary;
+                }
+            }
+        }
+    }
+}

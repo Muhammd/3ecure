@@ -1,0 +1,796 @@
+// --------------------------
+// Preview Homepage
+// --------------------------
+.project-select {
+    text-align:center;
+    @include t1;
+    div {
+        padding:17px 0 23px;
+        h6 {
+            margin-bottom:0;
+        }
+        p {
+            margin:0;
+        }
+    }
+    a:hover {
+        h6, p {
+            color:$primary;
+        }
+        img {
+            transform:scale(1.05);
+        }
+    }
+    img {
+        border-radius:4px;
+        width:95%;
+        margin:0 auto;
+        transform:scale(1);
+        @include t1;
+    }
+}
+
+// --------------------------
+// Address Holder
+// --------------------------
+.address-hold .holder {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+// --------------------------
+// Google Map
+// --------------------------
+#map {
+    height: 100%;
+    min-height: 320px;
+    @include bp(xs) {
+        height: 320px;
+    }
+}
+
+.map-area {
+    width: 100%;
+    height: 400px;
+    #map {
+        height: 100%;
+    }
+}
+
+// --------------------------
+// Grid Sys
+// --------------------------
+.gridsys {
+    [class*='col-'] div {
+        height: 20px;
+        background: $lg2;
+        margin-bottom: 37px;
+    }
+}
+
+// --------------------------
+// Coming Soon
+// --------------------------
+.comingsoon {
+    hr {
+        margin: 40px 0;
+    }
+    header {
+        height: auto !important;
+        min-height: 100%;
+    }
+    .caption {
+        padding: 200px 20px 130px !important;
+    }
+}
+
+// --------------------------
+// Widgets
+// --------------------------
+.widget {
+    border-radius: 4px;
+    padding: 5px 25px 15px;
+    a.btn {
+        margin-top: 0;
+    }
+}
+
+// --------------------------
+// Jobs
+// --------------------------
+.job {
+    padding: 15px 25px;
+    border-radius: 4px;
+    border: $lborder;
+    margin-bottom: 25px;
+    h5 {
+        margin: 0;
+        padding-top: 10px;
+    }
+    .accordion {
+        margin-bottom: 13px;
+        margin-top: 5px;
+    }
+    h3 b {
+        font-size: 70%;
+        float: right;
+        color: $grey3;
+    }
+}
+
+// --------------------------
+// Half Image
+// --------------------------
+.image-fw img {
+    width: 100%;
+}
+
+.holder {
+    height: 100%;
+    width: 100%;
+    display: table;
+    .placer {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+// --------------------------
+// Image Row
+// --------------------------
+.image-row {
+    overflow: hidden;
+    .row {
+        margin: 0;
+    }
+    [class*='col-'] {
+        padding: 0;
+    }
+}
+
+.fw-image {
+    img {
+        width: 100%;
+    }
+}
+
+// --------------------------
+// Video Container
+// --------------------------
+.video-pos {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.video-holder {
+    display: table-cell;
+    vertical-align: middle;
+    .video {
+        position: relative;
+        padding-bottom: 50.25%;
+        /* aspect ratio */
+        padding-top: 25px;
+        height: 0;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// --------------------------
+// Icon Block
+// --------------------------
+.iconblock {
+    i {
+        font-size: 50px;
+    }
+}
+
+// --------------------------
+// Phone Presentation - 1
+// --------------------------
+.phone-pres-1 {
+    hr {
+        border-color: transparent;
+        margin: 20px 0;
+    }
+    i {
+        font-size: 50px;
+    }
+    .right {
+        @include bp(xs) {
+            text-align: left;
+        }
+    }
+    .aligner {
+        height: 100%;
+        display: table;
+        .holder {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .phones {
+        img {
+            width: 60%;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            left: -19px;
+            &.behind {
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: -40px;
+                top: 0;
+                width: 56%;
+                bottom: -50px;
+            }
+        }
+    }
+}
+
+// --------------------------
+// Half Areas
+// --------------------------
+.halfarea {
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    @include bp(sm) {
+        padding: 0;
+    }
+    .container,
+    .container-fluid {
+        padding-top: calc(#{$vp} + 30px);
+        padding-bottom: calc(#{$vp} + 30px);
+        @include bp(sm) {
+            padding-top: $vp-sm;
+            padding-bottom: $vp-sm;
+            padding-left:70px;
+            padding-right:70px;
+        }
+        @include bp(xs) {
+            padding: $vp-xs 35px;
+        }
+    }
+    .imagearea {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        text-align: center;
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+        img.show {
+            height:100%;
+            &.right {
+                float:right;
+            }
+        }
+        img.imagearea-img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+            @include bp(xs) {
+                position: relative;
+            }
+        }
+        @include bp(xs) {
+            height: auto;
+            width: 100%;
+            position: relative;
+            max-height: 300px;
+        }
+    }
+    .imagearea-over {
+        position: absolute;
+        height: 100%;
+        padding: 0;
+        background: transparent;
+        @include bp(xs) {
+            position: relative;
+            padding-top: 80px;
+        }
+        img {
+            position: absolute;
+            height: auto;
+            width: auto;
+            max-height: 80%;
+            outline: none;
+            border: none;
+            padding: 0;
+            display: block;
+            right: -100px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            @include bp(xs) {
+                position: relative;
+                height:auto;
+                width: 100%;
+                right: 10%;
+            }
+        }
+        img.phone {
+            right: -133px;
+            @include bp(sm) {
+                right: -105px;
+            }
+        }
+        &.rightside img {
+            right: auto;
+            left: -100px;
+            @include bp(xs) {
+                left: 10%;
+            }
+        }
+        &.rightside img.phone {
+            left: -133px;
+            @include bp(sm) {
+                left: -105px;
+            }
+        }
+    }
+}
+
+// --------------------------
+// Scroll Up
+// --------------------------
+.scrollup {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 4800;
+    right: 25px;
+    bottom: 30px;
+    background: $primary;
+    border-radius: 50px;
+    display: block;
+    visibility: hidden;
+    transform: translateY(60px) scale(0.5);
+    opacity: 0;
+    text-align: center;
+    @include nav;
+    cursor: pointer;
+    &.vis {
+        visibility: visible;
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        &:hover {
+            transform: translateY(0) scale(1.1);
+        }
+    }
+    i {
+        color: white;
+        font-size: 30px;
+        position: relative;
+        top: 3px;
+    }
+}
+
+// --------------------------
+// Work With us
+// --------------------------
+#c_workwithus {
+    span {
+        @include bp(xs) {
+            display: block;
+        }
+    }
+    a.btn {
+        margin-left: 20px;
+        @include bp(xs) {
+            margin-left: 0;
+        }
+    }
+}
+
+// --------------------------
+// Newsletter
+// --------------------------
+#c_newsletter {
+    input {
+        margin: 7px 0;
+        @include bp(xs) {
+            min-width: 45%;
+        }
+    }
+    input[type="text"] {
+        margin-right: 6px;
+        max-width: 320px;
+        width: 100%;
+        @include bp(xs) {
+            max-width: 100%;
+        }
+    }
+    .note {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+}
+
+// --------------------------
+// Logo Strip
+// --------------------------
+#c_logos {
+    h5 {
+        top: -15px;
+        position: relative;
+    }
+    div {
+        position: relative;
+        .owl-carousel .owl-item img {
+            max-width: 80%;
+            width: auto;
+            margin: auto;
+        }
+    }
+}
+
+.logo-slider.owl-carousel .owl-item img {
+    max-width: 80%;
+    width: auto;
+    margin: auto;
+}
+
+// --------------------------
+// Logo Area
+// --------------------------
+#c_logo-area {
+    .logo {
+        text-align: center;
+        min-height: 30px;
+        margin: 17px 0;
+        img {
+            max-width: 70%;
+        }
+    }
+}
+
+// --------------------------
+// Counter
+// --------------------------
+#c_counter {
+    i {
+        font-size: 50px;
+    }
+}
+
+// --------------------------
+// Promo 1 & 2
+// --------------------------
+.promo {
+    background-size: cover;
+    @include bp(xs) {
+        text-align: center;
+    }
+    .promo-image {
+        position: relative;
+        margin-top: -140px;
+        margin-bottom: -100px;
+        width: 100%;
+        @include bp(md) {
+            margin-top: -120px;
+        }
+        @include bp(sm) {
+            margin: 0;
+        }
+        @include bp(xs) {
+            margin-top: 30px;
+        }
+    }
+}
+
+// --------------------------
+// Team Picture Styling
+// --------------------------
+.team-pic {
+    height: 310px;
+    width: 100%;
+    background: $dark1;
+    background-size: cover;
+    background-position: 50% 0%;
+    display: table;
+    @include bp(sm) {
+        height: 310px;
+    }
+    @include bp(xs) {
+        height: 210px;
+    }
+    .shader {
+        background: $shader;
+        opacity: 0;
+        @include t1;
+        width: 100%;
+        height: 100%;
+        display: table;
+        position: relative;
+    }
+    &:hover {
+        .name,
+        .social {
+            opacity: 1;
+        }
+        .shader {
+            opacity: 1;
+        }
+    }
+    .name {
+        display: table-cell;
+        position: relative;
+        z-index: 2;
+        @include t1;
+        vertical-align: middle;
+        color: white;
+        opacity: 0;
+        p {
+            opacity: .8;
+        }
+        h3,
+        p {
+            color: white;
+            margin: 0;
+        }
+    }
+    .social {
+        position: absolute;
+        z-index: 2;
+        @include t1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        padding: 30px 0;
+        text-align: center;
+        a {
+            color: white;
+            margin: 0 3px;
+            i {
+                font-size: 17px;
+                color: white;
+                opacity: .75;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.team-profile {
+    h3,
+    p {
+        margin: 0;
+    }
+    p {
+        margin-top: 20px;
+    }
+    .social {
+        margin-top: 10px;
+        a {
+            margin: 0 3px;
+            i {
+                font-size: 17px;
+                opacity: .75;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------
+// Social Strip
+// --------------------------
+.social-strip {
+    text-align: center;
+    border-top: 1px solid $lg2;
+    border-bottom: 1px solid $lg2;
+    .row {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .twitter,
+    .googleplus,
+    .instagram {
+        border-right: 1px solid $lg2;
+    }
+    a {
+        width: 100%;
+        padding: 10px 0;
+        display: block;
+    }
+    .social {
+        @include t1;
+        a i {
+            @include t1;
+        }
+    }
+    .social:hover {
+        background: $primary;
+        a i {
+            color: white;
+        }
+    }
+    &.grey {
+        background: $lg3;
+    }
+    &.dark1 {
+        background: $dark1;
+    }
+    &.dark2 {
+        background: $dark2;
+    }
+    &.dark3 {
+        background: $dark3;
+    }
+    &.dark1,
+    &.dark2,
+    &.dark3 {
+        border-color: $dark3;
+        .twitter,
+        .googleplus,
+        .instagram {
+            border-color: $dark3;
+        }
+    }
+}
+
+// --------------------------
+// Skill Lines
+// --------------------------
+.skill {
+    width: 100%;
+    position: relative;
+    .percentage {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        margin: 0;
+    }
+    .skill-line {
+        width: 100%;
+        border-radius: 2px;
+        border: $lborder;
+        height: 6px;
+        margin-bottom: 25px;
+        span {
+            height: 6px;
+            background: $primary;
+            display: block;
+            position: relative;
+            top: -1px;
+            left: -1px;
+            border-radius: 2px;
+        }
+    }
+}
+
+.dark1,
+.dark2,
+.dark3 {
+    .skill-line {
+        border: $dborder;
+    }
+}
+
+// --------------------------
+// Services - Icons
+// --------------------------
+.service {
+    i,
+    h5 {
+        display: inline-block;
+        padding-bottom: 0;
+        margin-bottom: 7px;
+    }
+    i {
+        position: relative;
+        top: 9px;
+        font-size: 35px;
+    }
+    h5 {
+        margin-left: 15px;
+    }
+}
+
+// --------------------------
+// Testimonials - Owl Slider
+// --------------------------
+#c_testimonials {
+    .person {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        display: block;
+        margin-bottom: 30px;
+        border-radius: 50px;
+    }
+    .slider h3,
+    .slider h5,
+    .slider h6 {
+        padding-right: 15%;
+        @include bp(xs) {
+            padding-right: 0;
+        }
+    }
+    &.center {
+        .slider h3,
+        .slider h5,
+        .slider h6 {
+            padding-right: 0%;
+        }
+        .owl-controls {
+            width: 100%;
+            .owl-nav div {
+                width: 50px;
+                height: 24px;
+                position: absolute;
+                top: 17px;
+            }
+        }
+    }
+    .owl-controls {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        @include bp(xs) {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 37px;
+        }
+        .owl-nav {
+            div {
+                display: block;
+                text-indent: -9999px;
+                width: 70px;
+                height: 33px;
+                position: relative;
+                opacity: .6;
+                transform: scale(.95);
+                @include t1;
+                @include bp(xs) {
+                    width: 50px;
+                    height: 25px;
+                    opacity: 1;
+                    position: absolute;
+                    top: 17px;
+                }
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                &.owl-prev {
+                    background: url(../img/arrow-left-b.svg);
+                    background-size: 100%;
+                }
+                &.owl-next {
+                    background: url(../img/arrow-right-b.svg);
+                    background-size: 100%;
+                    top: 5px;
+                    right: -30px;
+                    @include bp(xs) {
+                        top: 17px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

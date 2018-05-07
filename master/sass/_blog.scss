@@ -1,0 +1,440 @@
+// Short news item
+.news-item.short {
+    margin-bottom: 10px;
+    border: 0;
+    p {
+        font-size: 12px;
+        color: $primary;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    &.no-border {
+        border: 0;
+        box-shadow: none;
+        border-bottom: $lborder;
+        margin-bottom: 0;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .article-short {
+            padding-right: 0;
+            border-radius: 0;
+            padding: 25px 0 25px 80px;
+        }
+    }
+}
+
+.comment-list {
+    margin-bottom:30px;
+}
+
+.dark1,
+.dark2,
+.dark3,
+.primary {
+    .news-item.short.no-border {
+        border-bottom:$dborder;
+         &:last-child {
+            border-bottom: 0;
+        }
+    }
+    pre {
+        background:transparent;
+        color:$lg2;
+        border:$dborder;
+    }
+}
+
+.article-short {
+    padding: 20px 20px 20px 80px;
+    position: relative;
+    .user-pic img {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+    }
+    p,
+    h3 {
+        margin: 0;
+    }
+}
+
+// Blog Controls
+.blog-controls {
+    border-top: $lborder;
+    margin-top: 15px;
+    padding-top: 22px;
+    a {
+        display: inline-block;
+        &:hover {
+            i {
+                color: $secondary;
+            }
+        }
+        i {
+            font-size: 12px;
+            @include t1;
+            position: relative;
+            top: -1px;
+        }
+        &.prev-post i {
+            margin-right: 11px;
+        }
+        &.next-post i {
+            margin-left: 11px;
+        }
+    }
+}
+
+.dark1, .dark2, .dark3, .dark, .primary {
+    .blog-controls {
+        border-top:$dborder;
+    }
+    .posted-by, .comment {
+        background:transparent;
+        border:$dborder;
+        h3 {
+            border-bottom:$dborder;
+        }
+    }
+}
+
+// Posted by
+.posted-by {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .03);
+    border-radius: 4px;
+    border: $lborder;
+    background: white;
+    padding: 10px 25px;
+    position: relative;
+    h3 {
+        border-bottom: $lborder;
+        padding-bottom: 10px;
+    }
+    img {
+        width: 53px;
+        height: 53px;
+        position: absolute;
+        border-radius: 100px;
+        left: 0;
+        top: 5px;
+    }
+    > div {
+        position: relative;
+        margin: 25px 0;
+        padding-left: 75px;
+    }
+}
+
+// --
+// Comment Listing
+// --
+.comment {
+    padding-left: 98px;
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 25px;
+    padding-right: 20px;
+    padding-top: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .03);
+    border-radius: 4px;
+    border: $lborder;
+    background: white;
+    .date-posted {
+        margin-top: 0;
+        font-size: 13px;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 100px;
+        left: 25px;
+        top: 37px;
+    }
+    .reply {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+}
+
+ul.children {
+    margin-left: 50px;
+    @include bp(sm) {
+        margin-left: 30px;
+    }
+    @include bp(xs) {
+        margin-left: 15px;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+.blog-social {
+    h3 {
+        margin: 0;
+    }
+    .social a i {
+        margin-left: 20px;
+        display: inline-block;
+        @include t1;
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+.tag {
+    border-radius: 100px;
+    background: $primary;
+    display: inline-block;
+    padding: 0 17px;
+    line-height: 31px;
+    font-size: 14px;
+    color: white;
+}
+
+.banner-date {
+    display: inline-block;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    margin-top: 0;
+    padding-top: 12px;
+}
+
+// Sidebar
+.sidebar {
+    .item {
+        margin-bottom: 35px;
+        &::after {
+            clear: both;
+        }
+        .row {
+            padding-bottom: 15px;
+            a:hover {
+                .lp-title {
+                    color: $primary;
+                }
+            }
+        }
+        img {
+            border-radius: 4px;
+        }
+    }
+    .lp-title {
+        font-size: 15px;
+        margin: 0;
+        line-height: 20px;
+        margin-top: 10px;
+        @include t1;
+    }
+    ul.list {
+        li {
+            display: block;
+            &::before {
+                content: '\f125';
+                font-family: "IonIcons";
+                margin-right: 10px;
+                font-style: normal;
+                font-size: 12px;
+            }
+        }
+    }
+    ul.tags {
+        li {
+            display: inline-block;
+            a {
+                font-size: 13px;
+                padding: 5px 10px;
+                line-height: 13px;
+                border-radius: 100px;
+                margin: 5px 3px;
+                display: inline-block;
+                border: $lborder;
+                &:hover {
+                    color: $white;
+                    background: $primary;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// Blog
+.blog {
+    &.two-col {
+        margin: 0 auto;
+        .blog-sizer,
+        .blog-item {
+            margin: 0 1% 20px;
+            width: 48%;
+            @include bp(sm) {
+                margin-bottom: 18px;
+            }
+            .project-info h2 {
+                font-size: 25px;
+                @include bp(md) {
+                    font-size: 20px;
+                }
+            }
+            .project-info:before {
+                display: none;
+            }
+        }
+    }
+    &.three-col {
+        margin: 0 auto;
+        .blog-sizer,
+        .blog-item {
+            margin: 0 1% 20px;
+            width: 31.333%;
+            @include bp(sm) {
+                margin-bottom: 18px;
+            }
+            @include bp(xs) {
+                width: 48%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &.four-col {
+        margin: 0 auto;
+        .blog-sizer,
+        .blog-item {
+            margin: 0 1% 20px;
+            width: 23%;
+            @include bp(sm) {
+                width: 48%;
+                margin-bottom: 18px;
+            }
+            @include bp(xs) {
+                margin-bottom: 10px;
+            }
+            .project-info h2 {
+                font-size: 25px;
+                @include bp(md) {
+                    font-size: 20px;
+                }
+            }
+            .project-info {
+                padding: 20px 30px;
+            }
+            .project-info:before {
+                display: none;
+                @include bp(xs) {
+                    display: block;
+                }
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.blog-item,
+.news-item,
+.service-item {
+    background: white;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .03);
+    border-radius: 4px;
+    border: $lborder;
+    position: relative;
+    transform: scale(.97);
+    @include bp(sm) {
+        transform: scale(1);
+    }
+    overflow: hidden;
+    @include nav;
+    &:hover {
+        transform: scale(1);
+    }
+    .article {
+        padding-left: 25px;
+        padding-right: 25px;
+        position: relative;
+        .tag {
+            position: absolute;
+            top: -46px;
+            right: 16px;
+        }
+        a h3 {
+            margin-top: 0;
+        }
+        a p {
+            margin-bottom: 0;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    }
+    img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+}
+
+// --------------------------
+// Thumb Settings
+// --------------------------
+.dark1,
+.dark2,
+.dark3 {
+    .thumb1 {
+        background: $dark3;
+    }
+    .blog-item,
+    .news-item,
+    .service-item {
+        border: $dborder;
+        background: transparent;
+    }
+}
+
+.thumb1 img {
+    @include nav;
+}
+
+.blog-item:hover,
+.news-item:hover,
+.service-item:hover {
+    .thumb1 img {
+        transform: scale(1.1) rotate(3deg);
+    }
+}
+
+.blog-item,
+.news-item,
+.service-item {
+    .author {
+        padding: 5px 0;
+    }
+    a:hover {
+        h3 {
+            color: $primary;
+            @include nav;
+        }
+    }
+    .thumb1 {
+        width: 100%;
+        background: $lg2;
+        overflow: hidden;
+        @include t1;
+        img {
+            height: auto;
+            width: 100%;
+            display: block;
+        }
+    }
+}

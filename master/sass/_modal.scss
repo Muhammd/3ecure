@@ -1,0 +1,77 @@
+#modal-bg {
+    background: transparent;
+    @include search;
+    .exit {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        cursor: pointer;
+        opacity: .8;
+        z-index: 8000;
+        @include ease;
+        opacity: 0;
+        transform: translate(100px);
+        &.pop {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    width: 100%;
+    z-index: -10;
+    height: 100%;
+    position: fixed;
+    overflow: scroll;
+    #modal {
+        @include search;
+        margin: 30px auto;
+        width: 90%;
+        max-width: 500px;
+        background: $white;
+        position: relative;
+        border-radius: 4px;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        &.pop {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .w-section {
+            padding: 10px;
+        }
+        i {
+            font-size: 35px;
+        }
+        p {
+            font-size: 15px;
+        }
+        hr {
+            width: 80%;
+            margin: 17px auto;
+        }
+        .row {
+            padding: 10px 0;
+        }
+        .title {
+            .promo-heading {
+                margin: 0;
+                font-size: 20px;
+            }
+            h5 {
+                margin-bottom: 5px;
+            }
+        }
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+#modal-bg.appear {
+    @include search;
+    z-index: 5000;
+    background: $shader;
+}

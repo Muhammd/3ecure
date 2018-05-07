@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="master/customiser/cu.css">
+
+<ul>
+    <li class="a" data-theme="css/theme.css"></li>
+    <li class="b" data-theme="css/theme2.css"></li>
+    <li class="c" data-theme="css/theme3.css"></li>
+    <li class="d" data-theme="css/theme4.css"></li>
+    <li class="e" data-theme="css/theme5.css"></li>
+    <li class="f" data-theme="css/theme6.css"></li>
+    <li class="g" data-theme="css/theme7.css"></li>
+</ul>
+
+
+<script>
+$("li[data-theme]").on("click", function() {
+    $("link#theme").attr("href", $(this).data("theme"));
+});
+$('section, div.area, footer').append(
+    '<div class="style-toggle"></div>');
+$('.style-toggle').on('click', function() {
+    var $this = $(this),
+        $parent = $this.parent();
+    if ($parent.hasClass('grey')) {
+        $this.parent('footer').find('img').attr("src", "img/logo-light.svg");
+        $this.parent('#c_logo-area').find('img').attr("src", "img/logos/light/");
+        $parent.removeClass('grey').addClass('dark1');
+    } else if ($parent.hasClass('dark1')) {
+        $parent.removeClass('dark1').addClass('dark2');
+    } else if ($parent.hasClass('dark2')) {
+        $parent.removeClass('dark2').addClass('dark3');
+    } else if ($parent.hasClass('dark3')) {
+        $parent.removeClass('dark3');
+        $this.parent('footer').find('img').attr("src", "img/logo-dark.svg");
+    } else {
+        $parent.addClass('grey');
+    }
+});
+$('header.parallax-container').append(
+    '<div class="header-p-toggle"></div>');
+$('.header-p-toggle').on('click', function() {
+    var $this = $(this),
+        $parent = $this.parent(),
+        $nav = $('nav');
+    if ($parent.hasClass('dark')) {
+        $parent.removeClass('dark').addClass('light');
+        $nav.removeClass('start-light');
+    } else if ($parent.hasClass('light')) {
+        $parent.removeClass('light').addClass('primary');
+        $nav.addClass('start-light');
+        $nav.find('a.btn').addClass('white');
+    } else {
+        $parent.addClass('dark').removeClass('primary');
+        $nav.addClass('transparent').addClass('start-light');
+        $nav.find('a.btn').removeClass('white');
+    }
+});
+$('header').append(
+    '<div class="header-toggle"></div>');
+$('.header-toggle').on('click', function() {
+    var $this = $(this),
+        $parent = $this.parent(),
+        $nav = $('nav');
+    if ($parent.hasClass('grey')) {
+        $parent.removeClass('grey').addClass('dark1');
+        $nav.addClass('start-light');
+    } else if ($parent.hasClass('dark1')) {
+        $parent.removeClass('dark1').addClass('dark2');
+    } else if ($parent.hasClass('dark2')) {
+        $parent.removeClass('dark2').addClass('dark3');
+    } else if ($parent.hasClass('dark3')) {
+        $parent.removeClass('dark3');
+        $nav.removeClass('start-light');
+    } else {
+        $parent.addClass('grey');
+    }
+});
+</script>

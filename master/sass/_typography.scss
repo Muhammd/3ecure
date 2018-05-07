@@ -1,0 +1,416 @@
+// Fonts
+$font1: 'Poppins',
+sans-serif;
+$font2: 'Lato',
+sans-serif;
+// Headers
+$h1: 600 37px/48px $font1;
+$h2: 600 30px/40px $font1;
+$h3: 400 18px/29px $font1;
+$h4: 300 20px/29px $font1;
+$h5: 400 11px/14px $font1;
+$h6: 300 20px/32px $font1;
+$h1-xs: 600 26px/37px $font1;
+$h2-xs: 600 22px/32px $font1;
+$h4-xs: 300 17px/25px $font1;
+$h6-xs: 300 15px/25px $font1;
+// Paragraph
+$p1: 400 16px/26px $font2;
+// Promo Heading
+$promo-heading: 600 23px/34px $font1;
+$promo-heading-xs: 600 19px/25px $font1;
+// Navigation
+$nav: 500 12px/21px $font1;
+$nav-mobile: 600 25px/37px $font1;
+$nav-mobile2: 500 18px/33px $font1;
+$nav-mobile3: 400 15px/29px $font1;
+// --
+// Start
+:focus {
+    outline: none;
+    text-decoration: none !important;
+}
+
+.title {
+    text-align: center;
+    position: relative;
+    @include bp(xs) {
+        padding-bottom: 0px;
+    }
+}
+
+.title-with-button {
+    padding-bottom: 20px;
+    @include bp(xs) {
+        padding-bottom: 5px;
+    }
+    .btn {
+        float: right;
+        margin-top: 0px;
+        position: relative;
+        @include bp(xs) {
+            display: none;
+        }
+    }
+}
+
+nav li a {
+    font: $nav;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    @include bp(sm) {
+        font: $nav-mobile;
+        letter-spacing: 0;
+        text-transform: initial;
+    }
+}
+
+nav.minimal li a {
+    font: $nav-mobile;
+    letter-spacing: 0;
+    text-transform: initial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+i,
+textarea,
+ul,
+blockquote {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+
+p,
+a,
+input,
+label,
+span,
+textarea,
+blockquote {
+    font: $p1;
+}
+
+label {
+    color: $primary;
+    font-size: 14px;
+}
+
+h1 {
+    font: $h1;
+    color: $header1;
+    margin: 15px 0;
+    &.h2 {
+        font: $h2;
+    }
+    &.h3 {
+        font: $h3;
+    }
+    @include bp(xs) {
+        font: $h1-xs;
+    }
+}
+
+h2 {
+    font: $h2;
+    color: $header2;
+    margin: 10px 0;
+    @include bp(xs) {
+        font: $h2-xs;
+    }
+}
+
+h3 {
+    font: $h3;
+    color: $header3;
+    margin: 20px 0 15px;
+    @include bp(xs) {
+        margin: 5px 0;
+    }
+}
+
+h4 {
+    font: $h4;
+    color: $header4;
+    margin: 15px 0;
+    @include bp(xs) {
+        font: $h4-xs;
+    }
+}
+
+h5 {
+    font: $h5;
+    color: $header5;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 20px 0 20px;
+}
+
+.primary h5 {
+    color: white !important;
+}
+
+h6 {
+    font: $h6;
+    color: $header6;
+    margin: 10px 0;
+    @include bp(xs) {
+        font: $h6-xs;
+    }
+}
+
+.promo-heading {
+    font: $promo-heading;
+    color: $promo-head;
+    margin: 15px 0;
+    display: inline-block;
+    @include bp(xs) {
+        font: $promo-heading-xs;
+    }
+}
+
+blockquote {
+    border-left: 4px solid $lg2;
+    padding: 10px 25px;
+    margin: 25px 0;
+    display: block;
+    font-weight: 700;
+    font-style: italic;
+    color: $grey3;
+}
+
+pre {
+    padding: 15px;
+    margin: 30px 0;
+}
+
+p {
+    font: $p1;
+    color: $p;
+    margin: 15px 0;
+    a {
+        margin: 0;
+        text-decoration: underline;
+    }
+}
+
+ul.list {
+    li {
+        margin: 7px 0;
+        font-family: $font2;
+        color: $p;
+        font-style: italic;
+    }
+}
+
+ul.list2 {
+    padding: 4px 0;
+    li {
+        margin: 10px 0;
+        font-family: $font2;
+        color: $p;
+        font-style: italic;
+        font-size: 15px;
+        color: $primary;
+        &::before {
+            content: "\f3fe";
+            font-family: "Ionicons";
+            color: $primary;
+            font-size: 20px;
+            font-style: normal;
+            margin-right: 15px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+i {
+    color: $primary;
+    font-size: 25px;
+}
+
+.dark1,
+.dark2,
+.dark3,
+.dark,
+.primary,
+.masonry .project-info {
+    h1 {
+        color: $header1-w;
+    }
+    h2 {
+        color: $header2-w;
+    }
+    h3 {
+        color: $header3-w;
+    }
+    h4 {
+        color: $header4-w;
+    }
+    h5 {
+        color: $header5-w;
+    }
+    h6 {
+        color: $header6-w;
+    }
+    p,
+    ul li {
+        color: $p-w;
+    }
+    .promo-heading {
+        color: $promo-head-w;
+    }
+}
+
+.primary a.btn {
+    border-color: #fff;
+    span {
+        color: #fff;
+    }
+    &:hover span {
+        color: $primary;
+    }
+    &::after {
+        background-color: #fff;
+    }
+}
+
+//
+// Links
+//
+a {
+    font: $p1;
+    color: $primary;
+    margin: 15px 0;
+    text-decoration: none;
+    @include t1;
+    &:hover {
+        color: $secondary;
+        text-decoration: none;
+    }
+}
+
+//
+// Buttons
+//
+a.btn {
+    border: 2px solid $primary;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px 20px 9px;
+    background: none;
+    text-decoration: none;
+    margin-left: 15px;
+    &:first-of-type {
+        margin-left: 0;
+    }
+    @include t1;
+    span {
+        color: $primary;
+        position: relative;
+        z-index: 3;
+    }
+    &::after {
+        content: '';
+        background: $primary;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        opacity: 0;
+        @include t1;
+    }
+    &:hover {
+        color: white;
+        text-decoration: none;
+        span {
+            color: white;
+        }
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    @include bp(xs) {
+        min-width: 46%;
+        text-align: center;
+        padding: 13px 20px 14px;
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
+        span {
+            color: white;
+        }
+    }
+}
+
+.headroom--top a.btn.white {
+    border-color: white;
+    span {
+        color: white;
+    }
+}
+
+.primary a.btn {
+    @include bp(xs) {
+        span {
+            color: $primary;
+        }
+    }
+}
+
+a.btn.alt {
+    border-color: $lg2;
+    @include t1;
+    span {
+        color: $p;
+    }
+    &::after {
+        background: transparent;
+    }
+    &:hover {
+        border-color: $lg1;
+        span {
+            color: $grey3;
+        }
+    }
+}
+
+.dark1,
+.dark2,
+.dark3 {
+    a.btn.alt {
+        border-color: $dark3;
+        span {
+            color: $grey3;
+        }
+        &:hover {
+            span {
+                color: white;
+            }
+        }
+    }
+}
+
+// section a.btn:nth-child(odd) {
+//    margin-left: 15px;
+//    @include bp(xs) {
+//       margin-left: 0;
+//       margin-top: 0px;
+//    }
+// }
+.primary {
+    color: $primary;
+}

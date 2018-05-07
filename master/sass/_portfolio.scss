@@ -1,0 +1,459 @@
+.large-img {
+    padding: 0 35px;
+    margin-bottom: -27px;
+    overflow: hidden;
+    @include bp(xs) {
+        margin-bottom: -15px;
+    }
+    img {
+        margin-bottom: 27px;
+        @include bp(xs) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.project-strip {
+    padding: 20px;
+    h5 {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+    h3 {
+        margin-top: 6px;
+    }
+}
+
+.online {
+    position: absolute;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    margin-left: -525px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    @include bp(md) {
+        left: 0;
+        margin-left: 0;
+    }
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .row {
+        padding-top: 0;
+    }
+    h3 {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a {
+        @include bp(xs) {
+            width: 90%;
+        }
+    }
+}
+
+.project-bottom {
+    h6 {
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .social {
+        position: relative;
+        top: 37px;
+        @include bp(md) {
+            top: 40px;
+        }
+        @include bp(sm) {
+            top: 29px;
+        }
+        @include bp(xs) {
+            top: 21px;
+        }
+        a {
+            margin: 10px 10px;
+        }
+        a i {
+            color: $primary;
+            @include t1;
+            @include bp(xs) {
+                font-size: 18px;
+            }
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+.control-project {
+    position: relative;
+    top: 5px;
+    padding: 20px;
+    display: inline-block;
+    @include bp(sm) {
+        top: 0;
+    }
+    @include bp(xs) {
+        padding: 5px;
+    }
+    &:hover {
+        background: $lg3;
+        border-radius: 4px;
+    }
+}
+
+.parallax-project {
+    padding-top: calc(#{$vp} + 80px);
+    padding-bottom: calc(#{$vp} + 80px);
+    @include bp(sm) {
+        padding-top: calc(#{$vp-sm} + 80px);
+        padding-bottom: calc(#{$vp-sm} + 80px);
+    }
+    @include bp(xs) {
+        padding-top: calc(#{$vp-xs} + 80px);
+        padding-bottom: calc(#{$vp-xs} + 80px);
+    }
+    .row {
+        padding: 0;
+    }
+    h2 {
+        margin: 0;
+        @include bp(sm) {
+            font-size: 20px;
+        }
+    }
+    h5 {
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+    p {
+        margin-top: 0;
+    }
+    ul.tags {
+        li {
+            display: inline-block;
+            font-size: 12px;
+            margin-right: 3px;
+            border-radius: 100px;
+            line-height: 20px;
+            padding: 0 10px;
+            border: $lborder;
+        }
+    }
+    .project-info {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.portfolio {
+    .project-image {
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    h2 {
+        font-size: 25px;
+        margin: 0;
+        @include bp(sm) {
+            font-size: 20px;
+        }
+    }
+    h5 {
+        margin-bottom: 5px;
+        margin-top: 25px;
+    }
+    p {
+        margin-top: 0;
+    }
+    ul.tags {
+        li {
+            display: inline-block;
+            font-size: 10px;
+            margin-right: 3px;
+            border-radius: 100px;
+            line-height: 20px;
+            padding: 0 10px;
+            border: $lborder;
+        }
+    }
+}
+
+// Masonry
+.masonry {
+    &.two-col {
+        margin: 0 auto;
+        .grid-sizer,
+        .grid-item {
+            margin: 0 1% 20px;
+            width: 48%;
+            @include bp(sm) {
+                margin-bottom: 18px;
+            }
+            .project-info h2 {
+                font-size: 25px;
+                @include bp(md) {
+                    font-size: 20px;
+                }
+            }
+            .project-info:before {
+                display: none;
+            }
+        }
+        &.no-margin {
+            overflow: hidden;
+            .grid-sizer,
+            .grid-item {
+                margin: 0;
+                width: 50%;
+                @include bp(sm) {
+                    margin-bottom: 0;
+                }
+                @include bp(xs) {
+                    margin-bottom: 0;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    &.three-col {
+        margin: 0 auto;
+        .grid-sizer,
+        .grid-item {
+            margin: 0 1% 20px;
+            width: 31.333%;
+            @include bp(sm) {
+                margin-bottom: 18px;
+            }
+            @include bp(xs) {
+                width: 48%;
+                margin-bottom: 10px;
+            }
+        }
+        &.no-margin {
+            overflow: hidden;
+            .grid-sizer,
+            .grid-item {
+                margin: 0;
+                width: 33.35%;
+                @include bp(sm) {
+                    margin-bottom: 0;
+                }
+                @include bp(xs) {
+                    margin-bottom: 0;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    &.four-col {
+        margin: 0 auto;
+        .grid-sizer,
+        .grid-item {
+            margin: 0 1% 20px;
+            width: 23%;
+            @include bp(sm) {
+                margin-bottom: 18px;
+            }
+            @include bp(xs) {
+                width: 48%;
+                margin-bottom: 10px;
+            }
+            .project-info h2 {
+                font-size: 25px;
+                @include bp(md) {
+                    font-size: 20px;
+                }
+                @include bp(sm) {
+                    line-height: 23px;
+                }
+            }
+            .project-info {
+                padding: 40px 30px;
+            }
+            .project-info:before {
+                display: none;
+                @include bp(xs) {
+                    display: block;
+                }
+            }
+        }
+        &.no-margin {
+            overflow: hidden;
+            .grid-sizer,
+            .grid-item {
+                margin: 0;
+                width: 25%;
+                @include bp(sm) {
+                    margin-bottom: 0;
+                }
+                @include bp(xs) {
+                    margin-bottom: 0;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .grid-item {
+        float: left;
+        background: $lg3;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Hover Effects
+.masonry {
+    .grid-item {
+        position: relative;
+        @include t1;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            &::before {
+                position: absolute;
+                content: '';
+                background: $dark1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .6s ease-in-out;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            }
+        }
+    }
+    .project-info {
+        &::before {
+            content: "\f489";
+            font-family: "IonIcons";
+            color: $white;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 75px;
+        }
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 43px 40px;
+        text-align: left;
+        @include bp(sm) {
+            padding: 30px;
+            &::before {
+                content: '';
+            }
+            p {
+                display: none;
+            }
+            ul.tags {
+                display: none;
+            }
+        }
+        @include bp(xs) {
+            position: relative;
+            padding: 20px;
+        }
+        h5 {
+            margin: 0;
+            color: $primary;
+        }
+        h2 {
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+        p {
+            margin-top: 0;
+            font-size: 14px;
+            font-style: italic;
+        }
+        ul.tags {
+            li {
+                display: inline-block;
+                font-size: 10px;
+                margin-right: 3px;
+                border-radius: 100px;
+                line-height: 20px;
+                padding: 0 10px;
+                background: rgba(0, 0, 0, .1);
+                border: 1px solid rgba(255, 255, 255, .2);
+            }
+        }
+    }
+}
+
+// Hover effects
+.masonry .grid-item a {
+    .project-info {
+        opacity: 0;
+        transform: translateY(10px);
+        @include nav;
+    }
+    @include bp(xs) {
+        .project-info {
+            opacity: 1;
+            h2 {
+                color: $dark2;
+                margin-top: 0;
+                font-size: 17px;
+            }
+            transform: translateY(3px);
+        }
+    }
+    &:hover {
+        z-index: 5;
+        &::before {
+            opacity: .9;
+            @include bp(xs) {
+                display: none;
+            }
+        }
+        .project-info {
+            opacity: 1;
+            transform: translateY(0px);
+            @include nav;
+            @include bp(xs) {
+                transform: translateY(3px);
+            }
+        }
+    }
+}
+
+@include bp(xs) {
+    .project-info {
+        &::before {
+            content: '';
+            background: $lg3;
+            transform: rotate(45deg);
+            display: block;
+            width: 20px;
+            height: 20px;
+            top: -10px;
+            left: 20px;
+            position: absolute;
+        }
+    }
+}
+
+.list .project-info {
+    &::before {
+        display: none;
+    }
+    padding-bottom:20px;
+}

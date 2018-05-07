@@ -1,0 +1,350 @@
+// Variables
+$vp: 80px;
+$vp-minus: -80px;
+$vp-sm: 60px;
+$vp-sm-minus: -60px;
+$vp-xs: 45px;
+$vp-xs-minus: -45px;
+// Global Bootstrap Grid Overrides
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 950px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1070px;
+    }
+}
+
+// Fade In Web Page
+.web-in {
+    opacity: 0;
+    transition: 1.7s opacity ease;
+}
+
+.web-in.fade-in {
+    opacity: 1;
+}
+
+// HTML
+body,
+html {
+    height: 100%;
+    .web-in {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+    }
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+.container-fluid {
+    @include bp(lg) {
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: 1700px;
+        &.no-max {
+            max-width: 100%;
+        }
+    }
+    &.no-pad {
+        padding: 0;
+    }
+}
+
+// border-bottom
+.container.border,
+.container-fluid.border,
+.halfarea .border {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        border-bottom: $lborder;
+        height: 1px;
+        display: block;
+        bottom: $vp-minus;
+        left: 0;
+        @include bp(sm) {
+            bottom: $vp-sm-minus;
+        }
+        @include bp(xs) {
+            bottom: $vp-xs-minus;
+        }
+    }
+}
+
+.halfarea .border {
+    &::after {
+        bottom: 0;
+    }
+}
+
+.dark1,
+.dark2,
+.dark3 {
+    .container.border,
+    .container-fluid.border {
+        &::after {
+            border-bottom: $dborder;
+        }
+    }
+}
+
+// Blocks
+section,
+footer {
+    background-size: 100%;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    padding: $vp 20px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    @include bp(sm) {
+        padding: $vp-sm 20px;
+    }
+    @include bp(xs) {
+        padding: $vp-xs 20px;
+    }
+    &.no-pad {
+        padding: 0;
+    }
+}
+
+.row {
+    padding-bottom: 30px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+    @include bp(sm) {
+        padding: 20px 0;
+    }
+    @include bp(xs) {
+        padding: 12px 0;
+    }
+}
+
+.m-space > [class*='col-'] {
+    padding-top: 0px;
+    padding-bottom: 24px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+    @include bp(sm) {
+        padding-top: 0;
+        padding-bottom: 26px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    @include bp(xs) {
+        padding-bottom: 26px;
+        padding-top: 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.foot-space > [class*='col-'].spacer {
+    @include bp(sm) {
+        padding-bottom: 34px;
+    }
+    @include bp(xs) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
+
+[data-overlay]:before {
+    position: absolute;
+    content: '';
+    background-color: $dark1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.light[data-overlay]:before {
+    background-color: $lg3;
+}
+
+.primary[data-overlay]:before {
+    background-color: $primary;
+}
+
+[data-overlay="5"]:before {
+    opacity: 0.5;
+}
+
+[data-overlay="6"]:before {
+    opacity: 0.6;
+}
+
+[data-overlay="7"]:before {
+    opacity: 0.7;
+}
+
+[data-overlay="8"]:before {
+    opacity: 0.8;
+}
+
+[data-overlay="9"]:before {
+    opacity: 0.9;
+}
+
+[data-overlay="95"]:before {
+    opacity: 0.95;
+}
+
+[data-overlay="98"]:before {
+    opacity: 0.98;
+}
+
+.bg-block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    z-index: -1;
+}
+
+div.area {
+    padding: 50px 20px;
+    width: 100%;
+    position: relative;
+    @include bp(sm) {
+        padding: 30px 20px;
+    }
+}
+
+div.area.promo {
+    padding: 75px 20px;
+    position: relative;
+    @include bp(sm) {
+        padding: 50px 20px;
+    }
+}
+
+section.grey,
+footer.grey,
+header.grey,
+div.area.grey,
+div.widget.grey {
+    background-color: $lg3;
+}
+
+section.dark1,
+footer.dark1,
+header.dark1,
+div.area.dark1,
+div.widget.dark1 {
+    background-color: $dark1;
+}
+
+section.dark2,
+footer.dark2,
+header.dark2,
+div.area.dark2,
+div.widget.dark2 {
+    background-color: $dark2;
+}
+
+section.dark3,
+header.dark3,
+footer.dark3,
+div.area.dark3,
+div.widget.dark3 {
+    background-color: $dark3;
+}
+
+section.primary,
+footer.primary,
+div.area.primary,
+div.widget.primary {
+    background-color: $primary;
+}
+
+// Line Colours
+hr {
+    border: 0;
+    border-top: $lborder;
+}
+
+.dark1,
+.dark2,
+.dark3,
+.dark {
+    hr {
+        border-top: $dborder;
+    }
+}
+
+// Alignments
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.xs-center {
+    @include bp(xs) {
+        text-align: center;
+    }
+}
+
+// Padding exceptions
+.no-pad-top {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.no-pad-bot {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.no-lr-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.no-pad .row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.no-pad [class*='col-']:not(.title) {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.extra-pad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+// Margins
+.bm-20 {
+    margin-bottom: 20px;
+    display: inline-block;
+}

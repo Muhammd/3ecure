@@ -1,0 +1,189 @@
+$border-color: $white;
+$border-color2: $black;
+$width: 13px;
+$width2: 10px;
+$width3: 0;
+body.border-light {
+    &::before {
+        width: $width;
+        height: 100%;
+        background: $border-color;
+        top: 0;
+        left: 0;
+        position: fixed;
+        content: '';
+        z-index: 500;
+        @include bp(sm) {
+            width: $width2;
+        }
+        @include bp(xs) {
+            width: $width3;
+        }
+    }
+    &::after {
+        width: $width;
+        height: 100%;
+        background: $border-color;
+        top: 0;
+        right: 0;
+        position: fixed;
+        content: '';
+        z-index: 500;
+        @include bp(sm) {
+            width: $width2;
+        }
+        @include bp(xs) {
+            width: $width3;
+        }
+    }
+    .web-in {
+        &::before {
+            height: $width;
+            width: 100%;
+            background: $border-color;
+            top: 0;
+            left: 0;
+            position: fixed;
+            content: '';
+            z-index: 500;
+            @include bp(sm) {
+                height: $width2;
+            }
+            @include bp(xs) {
+                height: $width3;
+            }
+        }
+        &::after {
+            height: $width;
+            width: 100%;
+            background: $border-color;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            content: '';
+            z-index: 500;
+            @include bp(sm) {
+                height: $width2;
+            }
+            @include bp(xs) {
+                height: $width3;
+            }
+        }
+    }
+    nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        &.headroom--top {
+            padding-top: 25px;
+            padding-left: 35px;
+            padding-right: 35px;
+            .container-fluid {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @include bp(sm) {
+                padding-right: 30px;
+                padding-left: 30px;
+                padding-top: 0px;
+            }
+        }
+    }
+}
+
+body.border-dark {
+    &::before {
+        width: $width;
+        height: 100%;
+        background: $border-color2;
+        top: 0;
+        left: 0;
+        position: fixed;
+        content: '';
+        z-index: 500;
+        @include bp(sm) {
+            width: $width2;
+        }
+        @include bp(xs) {
+            width: $width3;
+        }
+    }
+    &::after {
+        width: $width;
+        height: 100%;
+        background: $border-color2;
+        top: 0;
+        right: 0;
+        position: fixed;
+        content: '';
+        z-index: 500;
+        @include bp(sm) {
+            width: $width2;
+        }
+        @include bp(xs) {
+            width: $width3;
+        }
+    }
+    .web-in {
+        &::before {
+            height: $width;
+            width: 100%;
+            background: $border-color2;
+            top: 0;
+            left: 0;
+            position: fixed;
+            content: '';
+            z-index: 500;
+            @include bp(sm) {
+                height: $width2;
+            }
+            @include bp(xs) {
+                height: $width3;
+            }
+        }
+        &::after {
+            height: $width;
+            width: 100%;
+            background: $border-color2;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            content: '';
+            z-index: 500;
+            @include bp(sm) {
+                height: $width2;
+            }
+            @include bp(xs) {
+                height: $width3;
+            }
+        }
+    }
+    nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        &.headroom--top {
+            padding-top: 25px;
+            padding-left: 45px;
+            padding-right: 45px;
+            @include bp(sm) {
+                padding-right: 30px;
+                padding-left: 30px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+// body.boxed {
+//    background: $white;
+//    height: auto;
+//    .web-in {
+//       background: $black;
+//    }
+//    .web-in,
+//    nav {
+//       max-width: 1199px;
+//       margin: 0 auto;
+//    }
+// }

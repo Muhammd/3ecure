@@ -1,0 +1,176 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project: Arisn
+Version: 1.0.0
+Last change:   07/10/16
+By:   Premonday
+Primary use:   Multi-Purpose HTML5 Bootstrap 3.3
+
+[Table of contents]
+
+1. Global
+2. Body Styles
+3. Typography
+4. Navigation
+5. Mastheads
+6. Portfolio
+7. Subpage Headers
+8. Components
+9. Gallery
+10. Tabs & Accordion
+11. Pricing Table
+12. Forms
+13. Modal
+14. Pace Loader
+15. Lightbox
+16. Parallax
+17. Search Modal
+18. Footers
+19. Blog, News, Services
+
+[Typography]
+
+Font 1 'Poppins', sans-serif;
+Font 2 'Lato', sans-serif;
+
+h1: 600 37px/48px Poppins;
+h2: 600 30px/40px Poppins;
+h3: 400 18px/29px Poppins;
+h4: 300 20px/29px Poppins;
+h5: 400 11px/14px Poppins;
+h6: 300 20px/32px Poppins;
+h1 Phone: 600 26px/37px Poppins;
+h2 Phone: 600 22px/32px Poppins;
+h4 Phone: 300 17px/25px Poppins;
+h6 Phone: 300 15px/25px Poppins;
+
+Paragraph: 400 16px/26px Lato;
+
+promo-heading: 600 23px/34px Poppins;
+promo-heading-xs: 600 19px/25px Poppins;
+
+nav: 500 12px/21px Poppins;
+nav-mobile: 600 25px/37px Poppins;
+nav-mobile2: 500 18px/33px Poppins;
+nav-mobile3: 400 15px/29px Poppins;
+-------------------------------------------------------------------*/
+// ------------------------------------
+// Invisible Imports
+// ------------------------------------
+@import "themes/_theme4-colours";
+@import "_mixins";
+
+/* ----------------------------------
+   1. G L O B A L
+---------------------------------- */
+
+@import "_global";
+
+/* ----------------------------------
+   2. B O D Y  S T Y L E S
+---------------------------------- */
+
+@import "_body-styles";
+
+/* ----------------------------------
+   3. T Y P O G R A P H Y
+---------------------------------- */
+
+@import "_typography";
+
+/* ----------------------------------
+   4. N A V I G A T I O N
+---------------------------------- */
+
+@import "_nav";
+
+/* ----------------------------------
+   5. M A S T H E A D S
+---------------------------------- */
+
+@import "_banners";
+
+/* ----------------------------------
+   6. P O R T F O L I O
+---------------------------------- */
+
+@import "_portfolio";
+
+/* ----------------------------------
+   7. S U B P A G E  H E A D E R S
+---------------------------------- */
+
+@import "_subpage-headers";
+
+/* ----------------------------------
+   8. C O M P O N E N T S
+---------------------------------- */
+
+@import "_components";
+
+/* ----------------------------------
+   9. G A L L E R Y
+---------------------------------- */
+
+@import "_gallery";
+
+/* ----------------------------------
+   10. T A B S  &  A C C O R D I O N
+---------------------------------- */
+
+@import "_tabs-accordion";
+
+/* ----------------------------------
+   11. P R I C I N G  T A B L E
+---------------------------------- */
+
+@import "_pricing-table";
+
+/* ----------------------------------
+   12. F O R M S
+---------------------------------- */
+
+@import "_forms";
+
+/* ----------------------------------
+   13. M O D A L
+---------------------------------- */
+
+@import "_modal";
+
+/* ----------------------------------
+   14. P A C E  L O A D E R
+---------------------------------- */
+
+@import "_pace";
+
+/* ----------------------------------
+   15. L I G H T B O X
+---------------------------------- */
+
+@import "_lightbox";
+
+/* ----------------------------------
+   16. P A R A L L A X
+---------------------------------- */
+
+@import "_parallax";
+
+/* ----------------------------------
+   17. S E A R C H  M O D A L
+---------------------------------- */
+
+@import "_search-modal";
+
+/* ----------------------------------
+   18. F O O T E R S
+---------------------------------- */
+
+@import "_footers";
+
+/* ----------------------------------
+   19. B L O G  /  N E W S  /  S E R V I C E S
+---------------------------------- */
+
+@import "_blog";

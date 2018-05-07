@@ -1,0 +1,53 @@
+.gallery {
+    .owl-carousel {
+        padding: 20px 0;
+    }
+    .owl-controls {
+        width: 100%;
+        .owl-dots {
+            width: 100%;
+            text-align: center;
+            top: 19px;
+            position: relative;
+            .owl-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                display: block;
+                margin: 0 5px;
+                background: $lg2;
+                display: inline-block;
+                &.active {
+                    background: $primary;
+                }
+            }
+        }
+    }
+    .content-fixer {
+        height: 100%;
+        display: table;
+        .content-holder {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+.gallery .center-loop-fade {
+    &.owl-carousel {
+        overflow: hidden;
+    }
+    .owl-stage-outer {
+        overflow: visible;
+    }
+    .owl-item {
+        opacity: .3;
+        transform: scale(.8);
+        @include t1;
+    }
+    .owl-item.center {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    }
+}

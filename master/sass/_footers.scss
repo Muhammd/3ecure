@@ -1,0 +1,132 @@
+footer .social {
+    a {
+        margin: 0 3px;
+        i {
+            font-size: 17px;
+            color: $grey3;
+            opacity: .75;
+            &:hover {
+                opacity: 1;
+                color: $primary;
+            }
+        }
+    }
+}
+
+footer.dark1,
+footer.dark2,
+footer.dark3 {
+    a {
+        i {
+            color: white;
+            &:hover {}
+        }
+    }
+    .footer-text a:hover {
+        color: white;
+    }
+}
+
+// --------------------------
+// footer1
+// --------------------------
+footer#minimal {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    .social {
+        padding: 15px 0 10px;
+        i {
+            font-size: 20px;
+            margin: 0 5px;
+        }
+    }
+    .footer-text {
+        font-size: 12px;
+        a {
+            font-size: 12px;
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+// --------------------------
+// footer1
+// --------------------------
+footer#smart {
+    padding-top: 55px;
+    padding-bottom: 19px;
+    form {
+        input {
+            width: 100%;
+            border: $lborder;
+            padding: 7px 12px;
+            font-size: 13px;
+        }
+        .note {
+            font-size: 11px;
+            font-style: italic;
+            margin: 3px 0;
+        }
+    }
+    .foot-title {
+        margin-top: 7px;
+        @include bp(sm) {
+            margin-top: 30px;
+        }
+    }
+    p {
+        font-size: 13px;
+        color: $grey3;
+    }
+    a {
+        font-size: 13px;
+        text-decoration: none;
+    }
+    li a {
+        color: $grey3;
+        &:hover {
+            color: $primary;
+        }
+    }
+    hr {
+        border-color: rgba(0, 0, 0, 0.1);
+        margin: 50px 0 13px;
+    }
+    .social {
+        padding: 15px 0 10px;
+        i {
+            font-size: 20px;
+            margin: 0 5px;
+        }
+    }
+    .footer-text {
+        font-size: 12px;
+        a {
+            font-size: 12px;
+            margin: 0 0 0 10px;
+        }
+    }
+}
+
+footer#smart.dark1,
+footer#smart.dark2,
+footer#smart.dark3 {
+    p {
+        color: $lg2;
+    }
+    li a {
+        color: $lg3;
+        &:hover {
+            color: white;
+        }
+    }
+    hr {
+        border-color: rgba(255, 255, 255, .1);
+    }
+    form input {
+        border: $dborder;
+    }
+    form p.note {
+        opacity: .5;
+    }
+}
